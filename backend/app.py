@@ -80,5 +80,5 @@ if st.button("Predict"):
     prediction = model.predict(new_data)
     prediction = np.expm1(prediction)
 
-    st.success(f"Predicted Selling Price: Rs {(prediction[0]*100000):.2f}")
+    st.success(f"Predicted Selling Price: Rs {abs(prediction[0]*100000):.2f}")
 
